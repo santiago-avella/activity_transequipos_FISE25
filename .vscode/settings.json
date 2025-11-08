@@ -1,0 +1,51 @@
+{
+  // Asociaciones de archivos para que VSCode trate .js/.jsx/.ts/.tsx como React
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "*.jsx": "javascriptreact",
+    "*.ts": "typescriptreact",
+    "*.tsx": "typescriptreact"
+  },
+  "editor.wordWrap": "on",
+
+  // Emmet dentro de React
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "javascriptreact": "html",
+    "typescriptreact": "html",
+    "typescript": "typescriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "always",
+
+  // Autocompletado en strings (ej: className="...")
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+
+  // Asegurar que IntelliSense de Tailwind entienda JSX/TSX
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascriptreact",
+    "javascriptreact": "javascriptreact",
+    "typescriptreact": "typescriptreact"
+  },
+
+  // Si Tailwind no detecta el config, especifica la ruta
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+
+  // Evitar que snippets bloqueen sugerencias normales
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+  // Mostrar Tailwind autocomplete incluso dentro de strings
+  "tailwindCSS.experimental.classRegex": [
+    ["class(?:Name)?=\\\"([^\\\"]*)\\\"", 1],
+    ["class(?:Name)?=\\'([^\\']*)\\'", 1],
+    ["class(?:Name)?=\\{`([^`]*)`\\}", 1],
+    ["tw`([^`]*)`", 1],
+    ["tw\\(\"([^\\\"]*)\"\\)", 1],
+    ["tw\\('([^']*)'\\)", 1]
+  ]
+  
+}

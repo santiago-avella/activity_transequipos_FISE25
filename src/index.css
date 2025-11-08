@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Thin.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-ThinItalic.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-BoldItalic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #004978;
+}
+
+.card {
+  position: relative;
+  height: 13rem;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 1.5rem;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --tw-shadow-color: #a3e635;
+  --tw-shadow:
+    0 20px 25px -5px var(--tw-shadow-color, rgba(0, 0, 0, 0.1)),
+    0 8px 10px -6px var(--tw-shadow-color, rgba(0, 0, 0, 0.1));
+  box-shadow: var(--tw-shadow);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+}
+
+.front {
+  background-color: rgba(0, 0, 0, 0.281);
+}
+
+/* Style the back side */
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}

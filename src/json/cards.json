@@ -1,0 +1,20 @@
+{
+  "listCards": [
+    { "id": 1,  "icon": "star",   "coupleNumber": 1, "flip": false },
+    { "id": 2,  "icon": "star",   "coupleNumber": 1, "flip": false },
+    { "id": 3,  "icon": "heart",  "coupleNumber": 2, "flip": false },
+    { "id": 4,  "icon": "heart",  "coupleNumber": 2, "flip": false },
+    { "id": 5,  "icon": "rocket", "coupleNumber": 3, "flip": false },
+    { "id": 6,  "icon": "rocket", "coupleNumber": 3, "flip": false },
+    { "id": 7,  "icon": "sun",    "coupleNumber": 4, "flip": false },
+    { "id": 8,  "icon": "sun",    "coupleNumber": 4, "flip": false },
+    { "id": 9,  "icon": "moon",   "coupleNumber": 5, "flip": false },
+    { "id": 10, "icon": "moon",   "coupleNumber": 5, "flip": false },
+    { "id": 11, "icon": "zap",    "coupleNumber": 6, "flip": false },
+    { "id": 12, "icon": "zap",    "coupleNumber": 6, "flip": false },
+    { "id": 13, "icon": "flame",  "coupleNumber": 7, "flip": false },
+    { "id": 14, "icon": "flame",  "coupleNumber": 7, "flip": false },
+    { "id": 15, "icon": "gem",    "coupleNumber": 8, "flip": false },
+    { "id": 16, "icon": "gem",    "coupleNumber": 8, "flip": false }
+  ]
+}
