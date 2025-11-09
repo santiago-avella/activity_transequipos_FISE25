@@ -4,15 +4,19 @@ import { useLocation } from "react-router-dom";
 import { Board } from "../components/board";
 import Confetti from 'react-confetti'
 import { sizeScreen } from "../const/size-screen";
-import { useState } from "react";
+import { use, useState } from "react";
+import { ClasificationTab } from "../components/clasification_tab";
 
 export function Game() {
     const { state } = useLocation()
     const user = state ?? {}
     const [endGame, setEndGame] = useState(false)
+    const [showStats, setShowStats] = useState(false)
 
-    const gameEnd = ((movements) => {
+    const gameEnd = (async (movements) => {
         setEndGame(!endGame)
+        await window.ApiElectron.saveDataGame({ id: user?.UUID, name: user?.name, movements: movements })
+        setShowStats(true)
     })
 
     return (
@@ -26,13 +30,14 @@ export function Game() {
                 </div>
             </section>
             <Board user={user} gameEnd={gameEnd} />
-            {endGame 
-                ? 
+            {endGame
+                ?
                 <Confetti
                     width={sizeScreen.width}
                     height={sizeScreen.height}
                 />
-            : ''}
+                : ''}
+            {showStats ? <ClasificationTab userId={user?.UUID}/> : ''}
         </>
     )
 }

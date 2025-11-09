@@ -5,7 +5,7 @@ import { IconMap } from "../const/icon-map"
 
 export function Card({ card, flipCard }) {
     const [flip, setFlip] = useState(card?.flip)
-    const ComponentIcon = IconMap[card?.icon]
+    const routeImg = IconMap[card?.icon]
     const changePositionCard = (() => flipCard(card))
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export function Card({ card, flipCard }) {
             <div onClick={changePositionCard} className={`card ${flip ? 'flip' : ''}`}>
                 <div className="front"></div>
                 <div className="back">
-                   {flip ? <ComponentIcon size={150}/>: ''}
+                   {flip ? <img className="h-[90%]" src={routeImg}></img>: ''}
                 </div>
             </div>
         </>

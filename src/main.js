@@ -5,12 +5,13 @@ import Store from 'electron-store'
 import crypto from 'node:crypto';
 
 const fileLocation = path.join(process.cwd(), 'data', 'survery')
-
+const count = 0
 const store = new Store({
   name: 'storage-data-app',
   cwd: fileLocation,
   defaults: {
-    survery_data: []
+    survery_data: [],
+    game_data: []
   }
   
 })
@@ -67,11 +68,14 @@ app.on('window-all-closed', () => {
   }
 });
 
+const getDateNow = () => new Date().toLocaleString('es-CO', {timeZone: 'America/Bogota'})
+
+
 ipcMain.handle('saveDataSurvery', (event, record) => {
   try {
     const dataPrev = store.get('survery_data')
     const UUID = crypto.randomUUID()
-    const dataNow = {UUID, ...record, date: new Date().toLocaleString('es-CO', {timeZone: 'America/Bogota'})}
+    const dataNow = {UUID, ...record, date: getDateNow()}
     dataPrev.push(dataNow)
     store.set('survery_data', dataPrev)
     return {
@@ -85,6 +89,35 @@ ipcMain.handle('saveDataSurvery', (event, record) => {
       message: 'Error in saving'
     }
   } 
+})
+
+
+ipcMain.handle('saveDataGame', (event, record) => {
+  try{
+    const dataPrev = store.get('game_data')
+    const dataNew = [...dataPrev, {...record, date: getDateNow()}]
+    store.set('game_data', dataNew)
+    return {
+      success: true,
+      message: 'Data saved correctly'
+    }
+  } 
+  catch{
+    return {
+      success: false,
+      message: 'Error in saving'
+    }
+  }
+})
+
+
+ipcMain.handle('getRankingGame', () => {
+  let position = 0
+  const dataGame = store.get('game_data') || []
+  return dataGame.sort((a, b) => a?.movements - b?.movements).map((record) => {
+    position ++
+    return {position: position, ...record}
+  })
 })
 
 // In this file you can include the rest of your app's specific main process

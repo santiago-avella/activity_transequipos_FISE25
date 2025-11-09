@@ -8,8 +8,8 @@ function App(){
     return (
         <HashRouter>
             <Routes>
-                <Route element={<Index/>}></Route>
-                <Route index /*path="/game"/>*/ element={<Game/>}></Route>
+                <Route index element={<Index/>}></Route>
+                <Route path="/game" element={<Game/>}></Route>
             </Routes>
         </HashRouter>
     )

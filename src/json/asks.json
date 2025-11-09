@@ -2,52 +2,29 @@
   "listAsks": [
     {
       "id": "01",
-      "content": "¿Cuál es la capital de Francia?",
+      "content": "¿Cuál fue el principal motivo para elegir a nuestra empresa?",
       "answers": [
-        { "id": "A", "option": "Londres" },
-        { "id": "B", "option": "París" },
-        { "id": "C", "option": "Berlín" },
-        { "id": "D", "option": "Madrid" }
+        { "id": "A", "option": "Recomendación de un tercero" },
+        { "id": "B", "option": "Experiencia técnica y profesionalismo" },
+        { "id": "C", "option": "Rapidez en tiempo de respuesta" }
       ]
     },
     {
       "id": "02",
-      "content": "¿Qué planeta es conocido como el planeta rojo?",
+      "content": "Si ya contrató nuestros servicios, ¿qué tan satisfecho está con los resultados obtenidos?",
       "answers": [
-        { "id": "A", "option": "Venus" },
-        { "id": "B", "option": "Júpiter" },
-        { "id": "C", "option": "Marte" },
-        { "id": "D", "option": "Saturno" }
+        { "id": "A", "option": "Muy satisfecho" },
+        { "id": "B", "option": "Satisfecho" },
+        { "id": "C", "option": "Insatisfecho" }
       ]
     },
     {
       "id": "03",
-      "content": "¿Cuántos continentes hay en el mundo?",
+      "content": "Qué tan probable es que vuelva a contratarnos (o que nos contrate por primera vez) en próximos 6 meses?",
       "answers": [
-        { "id": "A", "option": "5" },
-        { "id": "B", "option": "6" },
-        { "id": "C", "option": "7" },
-        { "id": "D", "option": "8" }
-      ]
-    },
-    {
-      "id": "04",
-      "content": "¿Quién pintó la Mona Lisa?",
-      "answers": [
-        { "id": "A", "option": "Vincent van Gogh" },
-        { "id": "B", "option": "Pablo Picasso" },
-        { "id": "C", "option": "Leonardo da Vinci" },
-        { "id": "D", "option": "Miguel Ángel" }
-      ]
-    },
-    {
-      "id": "05",
-      "content": "¿Cuál es el océano más grande del mundo?",
-      "answers": [
-        { "id": "A", "option": "Océano Atlántico" },
-        { "id": "B", "option": "Océano Índico" },
-        { "id": "C", "option": "Océano Pacífico" },
-        { "id": "D", "option": "Océano Ártico" }
+        { "id": "A", "option": "Muy probable" },
+        { "id": "B", "option": "Probable" },
+        { "id": "C", "option": "Poco probable" }
       ]
     }
   ]

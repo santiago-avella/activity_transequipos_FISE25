@@ -1,7 +1,7 @@
 
 export function Ask({asks, activerRadio}) {  
   return (
-    <div className='flex flex-col gap-10'>
+    <div className='flex flex-col gap-14'>
       {asks.map((ask) => (
         <div key={ask.id} id={ask.id}>
           <h3 className="mb-5 text-lg font-medium text-gray-900 dark:text-white">
@@ -20,7 +20,7 @@ export function Ask({asks, activerRadio}) {
                 />
                 <label 
                   htmlFor={`ask-${ask.id}-option-${answer.id}`} 
-                  className="inline-flex items-center justify-between w-full p-5 text-white italic bg-blue-950/40 border-blue-950/10 rounded-lg border-2 cursor-pointer peer-checked:border-amber-600 peer-checked:text-amber-500"
+                  className="inline-flex items-center justify-between w-full p-5 text-white italic bg-blue-950/40 border-blue-950/10 rounded-lg border-2 cursor-pointer peer-checked:border-amber-500 peer-checked:text-amber-500"
                 >
                   <div className="block">
                     <h1>{answer.option}</h1>
